@@ -1,0 +1,11 @@
+<div *ngIf="calculado == false">
+  <h2>Entrada</h2>
+  <div>
+    <label>Quantidade:
+      <input [(ngModel)]="model.quantidade" placeholder="Quantidade">
+    </label>
+  </div>
+  <button (click)="calcular()">Calcular</button>
+</div>
+<button *ngIf="calculado" (click)="voltar()">Voltar</button>
+<app-resultado [resultado]="resultado"></app-resultado>
